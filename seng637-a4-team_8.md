@@ -1,4 +1,4 @@
-**SENG 637 - Dependability and Reliability of Software Systems**
+# SENG 637 - Dependability and Reliability of Software Systems
 
 **Lab. Report \#4 – Mutation Testing and Web app testing**
 
@@ -9,18 +9,22 @@
 |                | **Heena**      |
 |                | **Tafreed**    |
 
-### I. Introduction
+## I. Introduction
 
 In this fourth lab for SENG 637, our group explored two critical pillars of modern software quality assurance: Mutation Testing and Automated GUI Testing. While previous assignments focused on traditional black-box and white-box techniques to establish baseline coverage, this lab challenged us to evaluate the actual effectiveness of our test suites. By using Pitest to inject faults into the `JFreeChart` codebase, we moved beyond simple line coverage to measure "mutation confidence." This process forced us to confront the reality of test design—specifically, identifying whether our assertions are robust enough to detect subtle logic changes or if we are merely "passing" through the code without truly validating its behavior.
 
 The first phase of our activity involved a deep dive into the `Range` and `DataUtilities` classes. We focused on configuring Pitest with both method-level and class-level mutators to simulate real-world programming errors. A significant portion of our technical discussion centered on the "equivalent mutant" problem, where we analyzed why certain survived mutations are functionally identical to the original code and how this phenomenon skews the accuracy of a mutation score. To meet the lab requirements, we iteratively refined our JUnit suites from Assignment 3, aiming for a minimum 10% increase in mutation scores by targeting specific logic gaps revealed by the tool.
 
-The second phase transitioned from backend logic to the presentation layer through automated GUI testing. Using Selenium IDE, we designed and automated test cases for complex web functionalities—such as search filters and booking workflows—on high-traffic platforms like Amazon and Air Canada. This part of the lab highlighted the practical trade-offs between manual "point-and-click" verification and the reliability of automated record-and-replay scripts. By incorporating automated verification points and diverse datasets, we sought to build a resilient UI test suite that could handle the dynamic nature of modern web interfaces. Collectively, these tasks provided us with a holistic view of dependability, from the granular bytecode level up to the end-user experience.
+The second phase of this lab transitioned from internal logic validation to the presentation layer through automated GUI testing. We selected the Banana Republic e-commerce platform as our System Under Test (SUT) to evaluate its highly dynamic interface and diverse feature set. Our primary objective was to move beyond manual "point-and-click" verification by developing a resilient, automated test suite using Selenium IDE.
+
+Our test design process was rooted in simulating realistic user journeys through a data-driven approach. We designed and executed eight distinct test cases covering four critical functional areas: Search, Navigation, Cart Validation, and Content Display. 
+
+Collectively, these tasks provided us with a holistic view of dependability, from the granular bytecode level up to the end-user experience.
 
 ---
 <h2 style="text-align: center;">MUTATION TESTING</h2>
 
-### II. Analysis of 10 Mutants of the Range class 
+## II. Analysis of 10 Mutants of the Range class 
 
 | Analysis of at least 10 mutants produced by Pitest for the `Range` class, and how they are killed or not by your original test suite | 10 |
 | :---- | :---- |
@@ -109,7 +113,7 @@ return result;
 Mutations 1&4&5 try to change the return value before it executes. Since the value changes before the execution, they can be killed by checking if the returned hash code of a range matches its true hash code. Hence, the mutation is killed.
 
 
-# III. Statistics and the Mutation Score for Each Test Class
+## III. Statistics and the Mutation Score for Each Test Class
 
 #### Mutation score and mutation statistics of Range \- BEFORE
 
@@ -137,7 +141,7 @@ Mutations 1&4&5 try to change the return value before it executes. Since the val
 
 For DataUtilities, the Mutation Coverage and Test Strength is already high so we can only increase it by 2% but we think that 93% is already sufficient and very good coverage.
 
-# IV. Analysis drawn on the effectiveness of each of the test classes
+## IV. Analysis drawn on the effectiveness of each of the test classes
 
 The effectiveness of our test suites was evaluated through two distinct lenses: Mutation Analysis for unit-level logic and Functional Automation for system-level GUI interactions.
 
@@ -163,7 +167,7 @@ Our GUI test suite was evaluated on how well it simulated real user actions and 
 4. **Effectiveness**: These tests effectively validated core user workflows and application behaviour by providing confidence in the system from a user perspective, through GUI changes or loading delays can sometimes affect automation.
 
 
-### V. The effect of equivalent mutants on mutation score accuracy
+## V. The effect of equivalent mutants on mutation score accuracy
 
 The presence of equivalent mutants represents a primary bottleneck in achieving an objective mutation score, often skewing the metric into a territory of diminishing returns. In practice, PIT frequently generates mutations that are functionally identical to the original source code—such as swapping i \< n for i \!= n in a standard incrementing loop. Because the observable behavior of the program remains unchanged, no test suite, regardless of its robustness, can "kill" these mutants. For a developer, this introduces significant manual overhead; we are forced to spend time triaging "survived" mutants only to realize the failure lies in the tool’s lack of semantic awareness rather than a gap in our testing logic.
 
@@ -173,18 +177,27 @@ Ultimately, the mutation score should be treated as a heuristic for finding genu
 
 PIT is most useful for finding gaps in logic coverage, not for achieving a perfect score.
 
-### VI. What could have been done to improve the mutation score of the test suites
+## VI. What could have been done to improve the mutation score of the test suites
 
 The ranges we used were too broad. Many surviving mutants involved "Changed Conditional Boundary" in methods like equals and contains. We should use extremely small deltas to ensure that even a tiny increment by a mutation results in a test failure. We'd better avoid using 1 and 0 as our range boundaries to make incrementation and negation make a significant difference in the result. To effectively kill arithmetic mutants (e.g.hash-code), it is better to use pre-calculated, hardcoded constants in assertions rather than dynamic calculations.
 
-### VII. Why do we need mutation testing? Advantages and disadvantages of mutation testing
+## VII. Why do we need mutation testing? Advantages and disadvantages of mutation testing
 
 Mutation testing is a sophisticated technique used to validate the effectiveness of a test suite, addressing the common misconception that high code coverage automatically equates to high test quality. The process involves introducing small, intentional faults—known as **mutants**—into the source code. If the test suite fails when executed against a mutated version, the mutant is "killed," confirming the tests are robust. Conversely, if the tests pass despite the fault, the mutant "survives," signalling a gap in the test suite's logic.
+
+#### **Advantages**
+
+The primary benefit of mutation testing is its ability to expose subtle weaknesses in a codebase. By altering logical operators, it forces developers to write precise **boundary value tests** that standard coverage metrics often overlook. Furthermore, when a mutant survives, it indicates the need for stronger, more meaningful **assertion statements**, ensuring that tests are actually verifying behavior rather than just executing lines of code.
+
+#### **Disadvantages**
+
+Despite its effectiveness, mutation testing comes with significant overhead. Running tools like **PIT** is computationally expensive and time-consuming, especially for large projects. Additionally, developers often encounter the **"Equivalent Mutant"** problem—mutants that change the code's syntax but not its actual behaviour. These cannot be killed by any test, requiring tedious manual analysis to identify and exclude them from the results.
+
 
 ---
 <h2 style="text-align: center;">GUI TESTING</h2>
 
-### VIII. SELENUIM test case design process
+## VIII. SELENIUM test case design process
 
 We selected the Banana Republic website as our System Under Test (SUT) due to its highly intuitive user interface and a diverse set of features that make it an ideal candidate for comprehensive GUI testing. The platform's architectural layout allows for a rigorous evaluation of various UI components and navigation patterns common in modern web applications.
 
@@ -196,7 +209,7 @@ For navigation testing, we designed two test cases. The first verifies that clic
 
 Each test case was structured as a methodical sequence of user actions, including element interaction, text input, and page navigation, designed to simulate realistic user behavior. Automated verification checkpoints were added to each test using Selenium IDE's assert commands, ensuring that expected outcomes were validated without manual inspection. Our ultimate objective was to ensure the system maintained functional integrity and responded accurately under a variety of operational conditions.
 
-### IX. The use of assertions and checkpoints
+## IX. The use of assertions and checkpoints
 
 Assertions and checkpoints were used to verify that the application behaved as expected during test execution. The automation tool's `assert element present` and `assert text` commands were used to implement these verification points across all eight test cases.
 
@@ -210,7 +223,7 @@ For the navigation test cases, assertions verified that the correct category pag
 
 Because the website is dynamic, stable and generic elements such as the page body and persistent UI components were utilized for verification to prevent failures caused by element identifiers that change frequently. These assertions made it possible to validate expected results automatically without the need for manual examination, improving both the efficiency and reliability of the testing process.
 
-### X. Test process for each functionality with different test data
+## X. Test process for each functionality with different test data
 
 To ensure comprehensive testing of the application functionalities, various test data were used across all eight test cases. The following table summarizes the test data used for each functionality:
 
@@ -235,7 +248,7 @@ For navigation testing, two different navigation paths and product pages were us
 ---
 <h2 style="text-align: center;">OTHERS</h2>
 
-### XI. How the team work/effort was divided and managed
+## XI. How the team work/effort was divided and managed
 
 | Sections |  | Member |
 | :---- | :---- | :---- |
@@ -253,12 +266,12 @@ For navigation testing, two different navigation paths and product pages were us
 | Category navigation | Page navigation | Zoe  |
 | Product visible | navigation/display | Zoe |
 
-### XII. Difficulties encountered, challenges overcome, and lessons learned
+## XII. Difficulties encountered, challenges overcome, and lessons learned
 
 In mutation testing, there was a missing library again in the library package contained in the artifact archive so that needs to be resolved in order for DataUtilitiesTest.java from Assignment to work and run properly. After that issue was resolved, equivalent mutations pushed us to the edge bumping our heads to wall in the hopes of eliminating the Surviving PIT Mutation Testing findings. After some research we came to realize that achieving a perfect 100% score with PIT Mutation Testing was not the goal but to be able to review the code logics that may have significant impact to the behaviors if not properly written.
 
 During GUI testing, the major issue was the dynamic nature of the Banana Republic website where element identifiers frequently changed.  Another challenge was the unavailability of the official Selenium IDE extension in the chrome webstore. That's why we used an alternative web browser "Firefox" to add the extension.These challenges were overcome by using more stable selectors such as verifying the page body and adjusting test strategies. Throughout the assignment we learned the importance of designing robust test cases, adapting tool limitations and selecting reliable locators which also highlight the importance of patience and iterative testing in GUI automation.
 
-### XIII. Comments/feedback on the assignment itself
+## XIII. Comments/feedback on the assignment itself
 
 This assignment provided us with valuable hands-on experience in both mutation and GUI automation. The GUI part was particularly useful in understanding how automated tools can simulate real user interactions and validate application response. However, the assignment can be improved by providing updated instructions regarding tool availability as the official Selenium IDE extension is no longer supported by chrome. But overall the assignment was well structured and helped us to develop practical skills in software testing, specially handling real world challenges for web applications.
