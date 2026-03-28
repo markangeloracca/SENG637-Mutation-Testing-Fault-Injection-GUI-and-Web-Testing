@@ -1,0 +1,567 @@
+{
+  "id": "c6a6703f-1991-4eac-bff8-e56e3fc9ec06",
+  "version": "2.0",
+  "name": "Assignment_4",
+  "url": "https://bananarepublic.gap.com",
+  "tests": [{
+    "id": "eb3407d5-64b8-4ecc-a628-590fae1f11ed",
+    "name": "Search_Valid",
+    "commands": [{
+      "id": "7ebfaf7f-d237-49c7-b60e-23f1ca4aefaa",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "642a7d20-539d-45b4-8085-0f83cf1c0f82",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1430x813",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "54a53ee2-296f-4705-97fb-0d79a0e22689",
+      "comment": "",
+      "command": "click",
+      "target": "id=search-input",
+      "targets": [
+        ["id=search-input", "id"],
+        ["css=#search-input", "css:finder"],
+        ["xpath=//input[@id='search-input']", "xpath:attributes"],
+        ["xpath=//div[@id='sitewide-app']/header/div[4]/div/div/div[2]/div[3]/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "43a81d0f-7625-4d8c-a361-e5041ff990a0",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=#suggestion-1 > .fds__core-web-copy",
+      "targets": [
+        ["css=#suggestion-1 > .fds__core-web-copy", "css:finder"],
+        ["xpath=(//button[@type='button'])[3]", "xpath:attributes"],
+        ["xpath=//li[@id='suggestion-1']/button[2]", "xpath:idRelative"],
+        ["xpath=//li[2]/button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'dress')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "27c7dcb4-4397-43d3-92c6-9718ad1d35f6",
+      "comment": "",
+      "command": "click",
+      "target": "css=#suggestion-1 > .fds__core-web-copy",
+      "targets": [
+        ["css=#suggestion-1 > .fds__core-web-copy", "css:finder"],
+        ["xpath=(//button[@type='button'])[3]", "xpath:attributes"],
+        ["xpath=//li[@id='suggestion-1']/button[2]", "xpath:idRelative"],
+        ["xpath=//li[2]/button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'dress')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "dd88543f-99b7-4615-bfb0-988078f42a7e",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=ACCESSORIES",
+      "targets": [
+        ["linkText=ACCESSORIES", "linkText"],
+        ["css=#division-4 .divisionLink", "css:finder"],
+        ["xpath=//a[contains(text(),'ACCESSORIES')]", "xpath:link"],
+        ["xpath=//li[@id='division-4']/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '#')])[26]", "xpath:href"],
+        ["xpath=//li[5]/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'ACCESSORIES')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8898ebc7-779d-4481-b90e-a90d904a2bf5",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=body",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "061178ea-4fb5-4884-80d0-dfa5680d8a6f",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "a4cd5a2d-ca58-4d62-8368-f0d3ac01ad32",
+    "name": "Search_Invalid",
+    "commands": [{
+      "id": "ccd9f05c-db28-40b1-99fd-295ed32d837b",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3da9639e-c64c-4e6f-a102-dbb3f9efbe0d",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1430x813",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "28a2ead3-8887-485f-99b4-8288c55019f8",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.sitewide-105i6cv",
+      "targets": [
+        ["css=.sitewide-105i6cv", "css:finder"],
+        ["xpath=//img[@alt='In Pursuit of Spring April is an open road. A reminder that all we need is the desire to explore and the pieces to take us there — linen that travels and utility for the journey.']", "xpath:img"],
+        ["xpath=//div[@id='main-content']/div/div/div/div/div/a/div/img", "xpath:idRelative"],
+        ["xpath=//div/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f39f7072-bc62-456d-b563-fba626bce468",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.sitewide-105i6cv",
+      "targets": [
+        ["css=.sitewide-105i6cv", "css:finder"],
+        ["xpath=//img[@alt='In Pursuit of Spring April is an open road. A reminder that all we need is the desire to explore and the pieces to take us there — linen that travels and utility for the journey.']", "xpath:img"],
+        ["xpath=//div[@id='main-content']/div/div/div/div/div/a/div/img", "xpath:idRelative"],
+        ["xpath=//a/div/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "08cb6093-5783-4c1e-8138-0e7c43e1f6b8",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.sitewide-105i6cv",
+      "targets": [
+        ["css=.sitewide-105i6cv", "css:finder"],
+        ["xpath=//img[@alt='In Pursuit of Spring April is an open road. A reminder that all we need is the desire to explore and the pieces to take us there — linen that travels and utility for the journey.']", "xpath:img"],
+        ["xpath=//div[@id='main-content']/div/div/div/div/div/a/div/img", "xpath:idRelative"],
+        ["xpath=//a/div/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bab1969b-884a-47de-9120-62470be92e32",
+      "comment": "",
+      "command": "click",
+      "target": "css=.sw_navigation-bar__desktop-content",
+      "targets": [
+        ["css=.sw_navigation-bar__desktop-content", "css:finder"],
+        ["xpath=//div[@id='sitewide-app']/header/div[4]/div/div/div[2]", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "63fbcc7c-3b7d-4055-9b3d-2678d15b4f7c",
+      "comment": "",
+      "command": "click",
+      "target": "id=search-input",
+      "targets": [
+        ["id=search-input", "id"],
+        ["css=#search-input", "css:finder"],
+        ["xpath=//input[@id='search-input']", "xpath:attributes"],
+        ["xpath=//div[@id='sitewide-app']/header/div[4]/div/div/div[2]/div[3]/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c5aa16eb-3b6b-4061-8553-401a662bf8e6",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=#suggestion-0 > .fds__core-web-copy",
+      "targets": [
+        ["css=#suggestion-0 > .fds__core-web-copy", "css:finder"],
+        ["xpath=(//button[@type='button'])[2]", "xpath:attributes"],
+        ["xpath=//li[@id='suggestion-0']/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'xyz123random')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "18400593-ef55-41f5-908e-5dd57f1b62b1",
+      "comment": "",
+      "command": "click",
+      "target": "css=#suggestion-0 > .fds__core-web-copy",
+      "targets": [
+        ["css=#suggestion-0 > .fds__core-web-copy", "css:finder"],
+        ["xpath=(//button[@type='button'])[2]", "xpath:attributes"],
+        ["xpath=//li[@id='suggestion-0']/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'xyz123random')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b5927433-28a4-413f-841c-bffb15cda83b",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=body",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e5fbd3ae-1317-4bb0-bfc7-b741dd1132aa",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "d9aa795a-25d4-48d2-81ab-c3797b06bb61",
+    "name": "Open_Cart",
+    "commands": [{
+      "id": "19117590-13c2-4111-8995-1fe277d3dbfc",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2f7dd442-6577-45be-aaba-6bd772753184",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1430x813",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "369a7a7a-85a1-47c6-a068-fbfd8b9dd6be",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "id=shopping-bag",
+      "targets": [
+        ["id=shopping-bag", "id"],
+        ["css=#shopping-bag", "css:finder"],
+        ["xpath=//button[@id='shopping-bag']", "xpath:attributes"],
+        ["xpath=//div[@id='sitewide-app']/header/div/div/div/div[3]/div/button", "xpath:idRelative"],
+        ["xpath=//div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b6060b3f-46bc-4d9e-8dbe-7bc395eafc95",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "id=shopping-bag",
+      "targets": [
+        ["id=shopping-bag", "id"],
+        ["css=#shopping-bag", "css:finder"],
+        ["xpath=//button[@id='shopping-bag']", "xpath:attributes"],
+        ["xpath=//div[@id='sitewide-app']/header/div/div/div/div[3]/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5735b612-98a9-4cfa-bf8a-8ccd1c52762c",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.sw_shopping-bag__icon",
+      "targets": [
+        ["css=.sw_shopping-bag__icon", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "55674b5d-4e3e-4ff8-86b4-db22f85c2d40",
+      "comment": "",
+      "command": "click",
+      "target": "css=.sw_shopping-bag__icon",
+      "targets": [
+        ["css=.sw_shopping-bag__icon", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "d027f6ad-b79a-4e2c-9251-e2c404d405a5",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.sw_account-button--loyalty-enabled",
+      "targets": [
+        ["css=.sw_account-button--loyalty-enabled", "css:finder"],
+        ["xpath=//div[@id='sitewide-app']/header/div/div/div/div[3]/nav/button", "xpath:idRelative"],
+        ["xpath=//nav/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5cc2df90-c0c2-48a2-ba65-ab5ce4bfe1f6",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=body",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c0482123-2527-4fe5-b00f-332aa5a13a6c",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "f991e086-9a15-4eed-8e89-26a1efc8fd24",
+    "name": "Sort_Price",
+    "commands": [{
+      "id": "a33234c1-68c3-4f80-9275-ee1efde62d4c",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "35b7d09d-d5fc-41d6-a867-9dafda6f3a3d",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1430x814",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2346995e-fb6a-4ca0-808c-434ef9efe000",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.sw_account-button--loyalty-enabled",
+      "targets": [
+        ["css=.sw_account-button--loyalty-enabled", "css:finder"],
+        ["xpath=//div[@id='sitewide-app']/header/div/div/div/div[3]/nav/button", "xpath:idRelative"],
+        ["xpath=//nav/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cf01d268-2170-411c-9f62-fa73aab9e09a",
+      "comment": "",
+      "command": "click",
+      "target": "id=search-input",
+      "targets": [
+        ["id=search-input", "id"],
+        ["css=#search-input", "css:finder"],
+        ["xpath=//input[@id='search-input']", "xpath:attributes"],
+        ["xpath=//div[@id='sitewide-app']/header/div[4]/div/div/div[2]/div[3]/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "767ae5fc-dc02-4889-8dae-d858d10e7dda",
+      "comment": "",
+      "command": "click",
+      "target": "css=#suggestion-0 > .fds__core-web-copy",
+      "targets": [
+        ["css=#suggestion-0 > .fds__core-web-copy", "css:finder"],
+        ["xpath=(//button[@type='button'])[2]", "xpath:attributes"],
+        ["xpath=//li[@id='suggestion-0']/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'dress')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "be64795a-20d7-4ec5-9581-14208f12a4ec",
+      "comment": "",
+      "command": "click",
+      "target": "id=selector-label",
+      "targets": [
+        ["id=selector-label", "id"],
+        ["css=li:nth-child(1) > #selector-label", "css:finder"],
+        ["xpath=//label[@id='selector-label']", "xpath:attributes"],
+        ["xpath=//div[@id='facets']/div/ul/li/label", "xpath:idRelative"],
+        ["xpath=//label", "xpath:position"],
+        ["xpath=//label[contains(.,'Filter & Sort')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "770f2f26-9815-4dba-be71-3287bb886214",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.fds_panel:nth-child(1) .fds_panel__toggle-title",
+      "targets": [
+        ["css=.fds_panel:nth-child(1) .fds_panel__toggle-title", "css:finder"],
+        ["xpath=//div[@id='fds_drawer-_R_1jlikslubsnqbtb_']/div/div[2]/div/div/div/div/h2/button/div", "xpath:idRelative"],
+        ["xpath=//h2/button/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e98d568f-df4a-4bee-9aca-b790c98a93b6",
+      "comment": "",
+      "command": "click",
+      "target": "css=.fds_panel:nth-child(1) .fds_panel__toggle-title",
+      "targets": [
+        ["css=.fds_panel:nth-child(1) .fds_panel__toggle-title", "css:finder"],
+        ["xpath=//div[@id='fds_drawer-_R_1jlikslubsnqbtb_']/div/div[2]/div/div/div/div/h2/button/div", "xpath:idRelative"],
+        ["xpath=//h2/button/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "99266f41-227c-4647-bc70-815644b3e136",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.fds_panel:nth-child(1) .fds_panel__toggle-title",
+      "targets": [
+        ["css=.fds_panel:nth-child(1) .fds_panel__toggle-title", "css:finder"],
+        ["xpath=//div[@id='fds_drawer-_R_1jlikslubsnqbtb_']/div/div[2]/div/div/div/div/h2/button/div", "xpath:idRelative"],
+        ["xpath=//h2/button/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "81d37219-3f62-44ec-b81c-ac293240086a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.fds_radio:nth-child(3) > .fds_radio__custom-radio",
+      "targets": [
+        ["css=.fds_radio:nth-child(3) > .fds_radio__custom-radio", "css:finder"],
+        ["xpath=//div[@id='fds_drawer-_R_1jlikslubsnqbtb_']/div/div[2]/div/div/div/div/div/div/div/label[3]/span", "xpath:idRelative"],
+        ["xpath=//label[3]/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "16f5441c-9628-4ada-b53c-e7fee2858f46",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "b9b26f43-2463-45cb-8162-f62097b8357a",
+    "name": "Filter_Category",
+    "commands": [{
+      "id": "5e8b61ad-38d6-44f3-b0fe-932d94be9f5f",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b8cafeb4-dad0-43c0-a5ae-c3b9df5e0bc0",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1430x814",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "809b3174-e4df-4d31-98a4-7dc1fd64acff",
+      "comment": "",
+      "command": "click",
+      "target": "id=search-input",
+      "targets": [
+        ["id=search-input", "id"],
+        ["css=#search-input", "css:finder"],
+        ["xpath=//input[@id='search-input']", "xpath:attributes"],
+        ["xpath=//div[@id='sitewide-app']/header/div[4]/div/div/div[2]/div[3]/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a3d96896-5ed6-43dd-8cc2-f60ec81466d0",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=#suggestion-0 > .fds__core-web-copy",
+      "targets": [
+        ["css=#suggestion-0 > .fds__core-web-copy", "css:finder"],
+        ["xpath=(//button[@type='button'])[2]", "xpath:attributes"],
+        ["xpath=//li[@id='suggestion-0']/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'dress')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "faa2e32b-d71f-4899-b07f-70d8950a39b1",
+      "comment": "",
+      "command": "click",
+      "target": "css=#suggestion-0 > .fds__core-web-copy",
+      "targets": [
+        ["css=#suggestion-0 > .fds__core-web-copy", "css:finder"],
+        ["xpath=(//button[@type='button'])[2]", "xpath:attributes"],
+        ["xpath=//li[@id='suggestion-0']/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'dress')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "944d8b30-1adb-4766-8294-7fee995dab95",
+      "comment": "",
+      "command": "click",
+      "target": "css=li:nth-child(1) > #selector-label .plp_grid-header__filters-button-text",
+      "targets": [
+        ["css=li:nth-child(1) > #selector-label .plp_grid-header__filters-button-text", "css:finder"],
+        ["xpath=//label[@id='selector-label']/span/span", "xpath:idRelative"],
+        ["xpath=//label/span/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "05cdb841-4f71-4f03-89b8-f7db90e71adf",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.fds_panel:nth-child(3) .fds_panel__title-toggle-wrapper",
+      "targets": [
+        ["css=.fds_panel:nth-child(3) .fds_panel__title-toggle-wrapper", "css:finder"],
+        ["xpath=//div[@id='fds_drawer-_R_1jlikslubsnqbtb_']/div/div[2]/div/div/div/div[3]/h2/button/div/div", "xpath:idRelative"],
+        ["xpath=//div[3]/h2/button/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4bc47329-56bc-4cf7-8b34-db154fc8498e",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.fds_panel:nth-child(3) .fds_panel__title-toggle-wrapper",
+      "targets": [
+        ["css=.fds_panel:nth-child(3) .fds_panel__title-toggle-wrapper", "css:finder"],
+        ["xpath=//div[@id='fds_drawer-_R_1jlikslubsnqbtb_']/div/div[2]/div/div/div/div[3]/h2/button/div/div", "xpath:idRelative"],
+        ["xpath=//div[3]/h2/button/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "dfebb64a-0101-4671-9a6a-1c4ab1bf12ef",
+      "comment": "",
+      "command": "click",
+      "target": "css=.fds_panel:nth-child(3)",
+      "targets": [
+        ["css=.fds_panel:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='fds_drawer-_R_1jlikslubsnqbtb_']/div/div[2]/div/div/div/div[3]", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/div[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ac9511c6-6466-490d-a295-132f6a6c0f0a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.fds_panel:nth-child(3) .fds_panel__toggle-icon",
+      "targets": [
+        ["css=.fds_panel:nth-child(3) .fds_panel__toggle-icon", "css:finder"],
+        ["xpath=//div[@id='fds_drawer-_R_1jlikslubsnqbtb_']/div/div[2]/div/div/div/div[3]/h2/button/div/div/div", "xpath:idRelative"],
+        ["xpath=//div[3]/h2/button/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cfa101f6-f625-483b-91fa-f94a554acfeb",
+      "comment": "",
+      "command": "click",
+      "target": "css=div:nth-child(5) > .fds_selector-swatch__container .fds_selector-swatch__inner",
+      "targets": [
+        ["css=div:nth-child(5) > .fds_selector-swatch__container .fds_selector-swatch__inner", "css:finder"],
+        ["xpath=//div[@id='fds_drawer-_R_1jlikslubsnqbtb_']/div/div[2]/div/div/div/div[3]/div/div/div/div[5]/div/div/label/div", "xpath:idRelative"],
+        ["xpath=//div[5]/div/div/label/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "de885c68-2162-42cd-8daa-4e8f74fe5598",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.fds_panel__toggle--expanded path",
+      "targets": [
+        ["css=.fds_panel__toggle--expanded path", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "73a07f1c-2b6e-4cc8-94ec-08989b49b655",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "4e213579-f87f-4f69-9e0e-c503aef012ec",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["https://bananarepublic.gap.com/"],
+  "plugins": []
+}
