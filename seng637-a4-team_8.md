@@ -239,6 +239,35 @@ To ensure comprehensive testing of the application functionalities, various test
 | Category Page Navigation | Navigation | Women → Tops navigation path to verify correct page loads |
 | Product Detail Visible | Navigation/Display | A specific product clicked to verify name, price and size selector are visible |
 
+
+
+**Valid Search**
+![Valid Search](media/valid_search.png)
+
+**Invalid Search**
+![Invalid Search](media/invalid_search.png)
+
+**Filter by Category**
+![Filter by Category](media/filter_category.png)
+
+**Price Sort**
+![Price Sort](media/price_sort.png)
+
+**Open Cart**
+![Open Cart](media/open_cart.png)
+
+**Add to Cart Without Size**
+![Add to Cart Without Size](media/add_to_cart_no_size.png)
+
+**Can't Submit Empty Review**
+![Can't Submit Empty Review](media/empty_review.png)
+
+**Category Page Navigation**
+![Category Page Navigation](media/category_navigation.png)
+
+**Product Detail Visible**
+![Product Detail Visible](media/product_detail.png)
+
 For the search functionality, both valid and invalid inputs were used. A valid keyword such as "dress" was used to verify that relevant results were returned, while an invalid string like "xyz123random" was used to test how the system handles unexpected or meaningless inputs. For filtering and sorting functionalities, different categories and sorting options were applied to check how the system responds to varied user interactions.
 
 For validation testing, different invalid input scenarios were used across two test cases. The cart validation test used a product with no size selected, while the review validation test used a completely empty form submission. These represent two distinct types of incomplete user input, ensuring the system correctly handles both scenarios.
@@ -252,8 +281,8 @@ For navigation testing, two different navigation paths and product pages were us
 
 | Sections |  | Member |
 | :---- | :---- | :---- |
-| **Mutation Testing** | Range | Zoe |
-|  | DataUtilities | Mark |
+| **Mutation Testing** | Range | Zoe, Tafreed |
+|  | DataUtilities | Mark, Heena |
 |  |  |  |
 | **GUI Testing** |  |  |
 | Valid search | Search | Tafreed |
